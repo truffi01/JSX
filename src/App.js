@@ -3,7 +3,7 @@
 function App() {
 
   return (
-    <input type='number' />
+    <div>Hello</div>
   );
 }
 
