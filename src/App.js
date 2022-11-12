@@ -1,9 +1,13 @@
-
+import faker from "faker";
+import CommentDetail from "./CommentDetail";
 
 function App() {
 
   return (
-    <div>Hello</div>
+    <div className="ui container comments" >
+      <CommentDetail author="To"/>
+      <CommentDetail author="Ma" />
+    </div>
   );
 }
 
