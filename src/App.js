@@ -1,14 +1,24 @@
-import faker from "faker";
-import CommentDetail from "./CommentDetail";
+import React from "react";
 
-function App() {
 
-  return (
-    <div className="ui container comments" >
-      <CommentDetail author="To"/>
-      <CommentDetail author="Ma" />
-    </div>
-  );
-}
+class App extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = { lat: null }; 
+  
+  };
+  
+  render(){
+
+    window.navigator.geolocation.getCurrentPosition((position) => {
+      this.setState({ lat: position.coords.latitude})
+    }, (err) => console.log(err));
+
+    return  <div>
+    Latitude : {this.state.lat} 
+   </div>
+  };
+};
 
 export default App;
