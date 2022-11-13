@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactDOM } from "react";
+import './SeasonDisplay.css'; 
 
 //study module 66 & 67 in course 
 const seasonConfig = {
@@ -29,6 +30,7 @@ const SeasonDisplay = props => {
     const season = getSeason(props.lat, new Date().getMonth()); 
 /*seasonconfig allows us to remove these 
 const text = season === 'winter' ? 'Burr, it is chilly' : 'Lets hit the beach' */
+//destructure seasonConfig for inputs in JSX
 const {text,iconName} = seasonConfig[season] /*return object {text, iconeName}*/
     return <div>
        <h1>{text}</h1>
